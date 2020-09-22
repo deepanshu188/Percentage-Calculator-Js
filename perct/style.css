@@ -1,37 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 body {
     margin:30px;
-    background:rgb(120, 29, 240);
+    background: rgb(120, 29, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #per {
     font-weight:bold;
     position:relative;
     font-style:italic;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
-#marks, #tmarks {
-    width:100px;
+#input1, #input2 {
+    width:120px;
     height:30px;
-    margin:30px;
-    border:1px solid grey;
+    margin:24px;
+    border:1px solid #ccc;
     outline:none;
     font-size:20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    transition: all 1s;
+    background: #000;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
 }
 
-#ob, #tm {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+#label1, #label2 {
     font-size:20px;
     font-weight:bold;
+    color: #FD0F2B;
+    font-family: 'Audiowide', cursive;
 }
 
 #btn {
-    background:red;
+    background:#FD0F2B;
     color:#ffffff;
     outline:none;
     border-color:red;
-    width:80px;
+    width:100px;
     height:40px;
     font-size:16px;
     border-radius:5px;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+}
+
+#btn:hover {
+    background: #f92039;
 }
 
 #progress {
@@ -41,10 +72,10 @@ body {
 }
 
 #progressBorder{
-    width:100%;
-    height:16px;
-    visibility:hidden;
-    background:#f1f1f1;
+    width: 100%;
+    height: 16px;
+    visibility: hidden;
+    background: #0b0b0b;
 }
 
 #msg {
@@ -54,17 +85,54 @@ body {
 }
 
 #container {
-    border:3px solid grey;
-    border-right-color:red;
-    border-bottom-color:red;
     padding:20px;
-    background:rgb(255, 255, 255);
+    background: #000;
     border-radius:15px;
-    width: 800px;
+    height: 50vh;
+    width: 70vw;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    align-self: center;
+    box-shadow: 3px 3px red;
 }
 
 h1{
     text-shadow:2px 2px 2px black;
-    color:rgb(216, 95, 79);
-    font-size:40px;
+    color:#FD0F2B;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#perAnime {
+    display: none;
+    margin-top: 15px;
+}
+
+#options {
+    font-size: 1rem;
+    outline: none;
+    background: #181717;
+    color: #fff;
+    border: none;
+    margin-bottom: 5px;
+    font-family: 'Audiowide', cursive;
+}
+
+@media (max-width:480px) {
+    #container {
+        height: 65vh;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+#mode {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
 }

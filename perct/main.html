@@ -2,29 +2,36 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Percentage Calc</title>
+        <title>Percentage calc</title>
         <script type="text/javascript" src="./script.js"></script>
         <link rel="stylesheet" type="text/css" href="./style.css">
     </head>
     <body>
+         <h1>Percetage Calc</h1>
     <div id="container">
-    <h1>Percetage Calc</h1>
-            <label id="ob">Marks Obtained:</label>
-        <input id="marks" type="number" placeholder="Obt.">
-            <br />
-            <label id="tm">Total Marks:</label>
-            <input id="tmarks" type="number" placeholder="Total.">
+    <label id="mode">Mode: </label>
+    <select id="options" onchange = "change()">
+  <option value="p1">% of Quantity</option>
+  <option value="p2">% from Quantity</option>
+    </select>
         <br />
-        <button id="btn" onClick="perctg()">Check!</button>
-        <p id="msg"></p>
+            <label id="label1">Total Quantity:</label>
             <br />
-                <br />
-                    <br />
-                <br />
-<div id="progressBorder">
+        <input id="input1" type="number">
+            <br />
+            <label id="label2">% of Quantity:</label>
+            <br />
+            <input id="input2" type="number">
+            <br />
+        <button id="btn" onclick="check()">Calculate</button>
+        <p id="msg"></p>
+
+<div id="perAnime">
+    <div id="progressBorder">
 <div id="progress">
     </div>
 <span id="per">%</span>
+</div>
     </div>
 </div>
     </body>
